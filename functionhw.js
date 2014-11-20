@@ -11,7 +11,7 @@ var newProductList = [];
 var getItemsByBrand = function(array, itemBrand) {
   for (var i = 0; i<array.length; i++) {
     if (array[i].product.brand === itemBrand) {
-    newProductList.push(array[i].product);
+    newProductList.push(array[i]);
     }
   }
   return newProductList;
@@ -46,8 +46,8 @@ var getAvailableProducts = function(array) {
 // console.log(getAvailableProducts(data.items));
 
 //Question 5 Use Your Functions
-
-// console.log(getItemsByAuthor(getItemsByBrand(data.items,"Nikon"),"eBay"));
+// console.log(getItemsByBrand(data.items,"Nikon"));
+console.log(getItemsByAuthor(getItemsByBrand(data.items,"Nikon"),"eBay"));
 // console.log(getItemsByBrand(getItemsByAuthor(data.items,"eBay"),"Nikon"));
 // console.log(getItemsByBrand(data.items,"Sony"));
 // console.log(getItemsByBrand(getAvailableProducts(data.items),"Sony"));
